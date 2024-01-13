@@ -36,7 +36,8 @@ class Point {
     let y = Utility.isFraction(this.y) ? this.y.display("text") : this.y
     let r = Utility.isFraction(this.r) ? this.r.display("text") : this.r
     let φ = this.φ
-
+    if(this.mode === "kartézské") return `(${x}, ${y})`;
+    if(this.mode === "polární") return  `(${r}, ${φ})`;
     return {cart: `(${x}, ${y})`, polar : `(${r}, ${φ})` }  
   }
 
