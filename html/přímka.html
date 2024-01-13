@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/přímka.css" />
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Playground</title>
+  </head>
+
+  <body style="display: grid; justify-content: center">
+    <header style="width: 50vw">
+      <a href="../index.html">O mně</a>
+      <a href="soustava.html">Soustava</a>
+      <a href="vektor.html">Vektor</a>
+      <a href="utvar.html">Útvar</a>
+    </header>
+
+    <h1 style="text-align: center; margin: 50px 0; cursor: pointer;" title="Oblibené místo">Playground</h1>
+    
+    <main class="glassmorphism">
+      
+      <form id="inputRovnice" class="glassmorphism">
+        <b>Obecná rovnice přímky</b>
+        <hr style=" margin: 10px 0; border-color: black;">
+
+        <div style="margin: 5px 0;">
+          <input type="number" id="a-parametr" size="5" placeholder="a" required/>
+          <label for="a-parametr">$\;x + \;$</label>
+  
+          <input type="number" id="b-parametr" size="5" placeholder="b" required/>
+          <label for="b-parametr">$\;y +\;$</label>
+  
+          <input type="number" id="c-parametr" size="5" placeholder="c" required/>
+          <label for="c-parametr">$\; = 0 \;$</label>  
+        </div>
+
+        
+        <div style="margin-top: 10px;">
+          <button type="submit"> Enter </button>
+          <button type="reset" onclick="resetButton()" > Reset </button>
+        </div>
+
+      </form>
+      
+      <section class="option">
+        <button id="all">Vše</button>
+        <button id="points">Body</button>
+        <button id="vectors">Vektory</button>
+        <button id="equation">Rovnice</button>
+        <button id="none">None</button>
+
+      </section>
+
+      <section id="element" class="glassmorphism" style="text-align: center;">
+        <b style="font-size: 20px; padding: 0 20px ;">Výsledek</b>
+        <div class="glassmorphism" id="body">
+          <b>Body</b>
+          <hr style=" margin: 10px 0; border-color: black;">
+  
+          <div style="margin-bottom: 15px;">
+            <div>
+              <label class="point">$Bod \; A = [$</label>
+              <label>$1$</label>
+              <label class="point">$;$</label>          
+              <span id="y-souřadnice-A" style="font-weight:600;">$y$</span>
+              <label class="point">$] \quad $</label>
+            </div>
+
+            <div>
+              <label class="point">$\; Bod \; B = [$</label>
+              <span id="x-souřadnice-B" style="font-weight:600;">$x$</span>
+              <label class="point">$;$</label>
+              <label>$1$</label>
+              <label class="point">$] \quad $</label>
+            </div>
+
+            <div>
+              <label class="point">$\; Bod \; X = [$</label>
+              <span id="x-Ox" style="font-weight:600;">$x$</span>
+              <label class="point">$;$</label>
+              <label>$0$</label>
+              <label class="point">$] \quad $</label>
+            </div>
+
+            <div>
+            <label class="point">$\; Bod \; Y = [$</label>
+            <label>$0$</label>
+            <label class="point">$;$</label>
+            <span id="y-Oy" style="font-weight:600;">$y$</span>
+            <label class="point">$] \quad $</label>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="glassmorphism" id="vektory">
+          <b>Vektory</b>
+          <hr style=" margin: 10px 0; border-color: black;">
+            <div>
+              <p style="font-weight: 700;">Směrový vektor : $\quad\vec{v} \;= \;$<span class="direction"></span></p> 
+              <p style="font-weight: 700;">Normálový vektor :  $\quad\vec{n} \;= \;$<span class="normal"></span></p>
+            </div>
+  
+        </div>
+
+        <section class="result glassmorphism" >
+          <b>Parametrická rovnice přímky</b>
+          <hr style=" margin: 10px 0; border-color: black;">
+          <p class="equation-para-1"></p>
+          <p class="equation-para-2"></p>
+  
+          <b>Směrnicová rovnice přímky</b>
+          <hr style=" margin: 10px 0; border-color: black;">
+          <p class="equation-slope-1"></p>
+          <p class="equation-slope-2"></p>
+
+          <b>Úseková rovnice přímky</b>
+          <hr style=" margin: 10px 0; border-color: black;">
+          <p class="equation-intercept"></p>
+
+  
+        </section>
+        </section>
+      
+
+      <div class="glassmorphism" id="applet1"></div>
+      <div id="comment"></div>
+    </main>
+
+
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+    <script src="../js/math.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script src="../js/playground/přímka.js"></script>
+    <script src="../js/playground/geogebra.js"></script>
+    <script src="../js/playground/playground.js"></script>
+  </body>
+</html>
+
+<!--
+   <script src="../js/přímka.js"></script>
+-->

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vektory</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/vektor.css" />
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="../js/main.js"></script>
+
+  </head>
+  <body>
+    <div></div>
+    <main>
+      <header>
+          <a href="../index.html">O mně</a>
+          <a href="soustava.html">Soustava</a>
+          <a href="vektor.html">Vektor</a>
+          <a href="utvar.html">Útvar</a>
+      </header>
+  
+      <h1 id="1" >Vektory</h1>
+      <fieldset style="border-radius: 0 0 20px 20px;" class="glassmorphism">
+        <section class="glassmorphism" >
+          <h2 id="1.1">Definice</h2>
+          <hr>
+          <p>Vektorem nazýváme množinu všech souhlasně orientovaných úseček téže velikosti</p>
+        </section>
+        <section class="glassmorphism" >
+          <h2 id="1.2">Velikost vektoru</h2>
+          <hr>
+          <p>Velikost vektoru <span style="padding: 0 10px;">\(\vec{u} = \vec{AB}\)</span> je daná velikostí orientované úsečky AB.</p>
+          <div class="glassmorphism formula">
+            $|\vec{u}| = \sqrt{a^2 + b^2}$
+          </div>
+        </section>
+        <section class="glassmorphism" >
+          <h2 id="1.3">Jednoduché operace s vektory</h2>
+          <hr>
+          <p>Jsou dané vektory <span>$\vec{v} = (v_1,v_2); \; \vec{u} = (u_1, u_2)$</span></p>
+          <h3 id="1.3.1">Součet / Rozdíl vektorů</h3>
+          <div class="glassmorphism formula">
+            $\vec{v} \pm \vec{u} = (v_1 \pm  u_1\;;\; v_2 \pm  u_2)$
+          </div>
+
+          <h3 id="1.3.2">Násobení / Dělení vektorů (se reálným číslem \(k \in R \))</h3>
+          <div class="formula glassmorphism">
+            $k\vec{v} = (kv_1\;;\; kv_2)$
+          </div>
+        </section>
+
+        <section class="glassmorphism">
+          <h2 id="1.3">Složité operace s vektory</h2>
+          <hr>
+          <p>Jsou dané vektory <span>$\vec{v} = (v_1,v_2); \; \vec{u} = (u_1, u_2)$</span></p>
+          <div class="glassmorphism">
+            <h3 id="1.3.1">Skalární součin vektorů</h3>
+            <hr>
+            <div style="display: flex; justify-content: space-between; ">
+              <div>
+                <div class="glassmorphism formula-cyan" >
+                  $\vec{v} . \vec{u} = |v||u| cos\theta$ 
+                </div>
+                <p style="margin: 0;"><b>Výsledek</b> : <span style="cursor: pointer;" title="skalár">číslo</span></p> 
+                <p style="cursor: pointer; margin: 0 0 20px 0;" title="Využití"><b>Funkce</b> : <span > vypočítat úhel mezi vektory</span></p>
+                <div class="glassmorphism formula-cyan">
+                  $\vec{v} \; . \; \vec{u} = v_1 .  u_1 \; + \; v_2 .  u_2$
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/220px-Dot_Product.svg.png" alt="dot">
+            </div>
+            
+          </div>
+
+          <div style="margin: 10px 0;" class="glassmorphism">            
+            <h3 id="1.3.2">Vektorový součin vektorů</h3>
+            <hr>
+            <div style="display: flex; justify-content: space-between; gap: 10px; ">
+              <div>
+                <div class="glassmorphism formula-cyan">
+                  $\vec{v} \times \vec{u} = |v||u|sin\theta$ 
+                </div>
+                <p style="margin: 0;"><b>Výsledek</b> : <span>vektor</span></p> 
+                <p style="cursor: pointer; margin: 0; " title="Využití"><b>Funkce</b> : 
+                  <li>počítat úhel mezi vektory</li>
+                  <li>počítat obsah trojúhelník / rovnoběžník</li>
+                  <li>zjistit normálový vektor k rovině a rovnice roviny </li>
+                </p>
+                <div class="glassmorphism formula-cyan">
+                  $\vec{v} \times \vec{u} = (u_2v_3 \; - u_3v_2 \;,\; u_3v_1 - u_1v_3 \;,\; u_1v_2 - u_2v_1)$ 
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Cross_product_vector.svg/1200px-Cross_product_vector.svg.png" alt="times" style="filter: brightness(0); height: 15vw;">  
+            </div>
+            
+            
+          </div>
+        </section>
+        </fieldset>
+    </main>
+  </main>
+  
+  <aside style="display: grid; justify-items: end; ">
+        
+    <div style="display: flex; margin: 10px 0 10px 10px;">
+      <div style="flex-direction: row; display: flex ; padding: 0; border-radius: 100px; width: fit-content; margin: 10px; padding: 8px 16px;" class="vibrate-1 glassmorphism playground">
+        <img id="cool" src="../img/web-payment.png" alt="cool-icon" style="width: auto; height: 2vw; margin-right: 10px; filter: none;">
+        <a style="margin: 5px; width: fit-content; cursor: pointer;" target="_blank" href="./přímka.html"> Playground</a>
+      </div>
+      <div>
+        <button id="menu" class="glassmorphism" style="padding: 10px; width: fit-content; border-radius: 15px; cursor: pointer;">
+          <img src="../img/more.png" alt="hide" style="width: auto; height: 2vw; ">
+        </button>
+      </div>
+    </div>
+    <div id="sideMenu" class="glassmorphism">
+      <p class="toc">Obsah</p>
+      <hr />
+      <div id="obsah"></div>
+    </div>
+  </aside>
+
+
+
+  <script src="../js/utvar.js"></script>
+  </body>
+</html>

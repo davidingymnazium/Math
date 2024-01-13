@@ -1,0 +1,54 @@
+main{
+    width: max(700px, 50vw);
+}
+
+form {
+    margin: 10px;
+}
+
+input,
+input::placeholder {
+    font-family: "Montserrat", monospace;
+    font-weight: 800;
+    text-align: center;
+    width: 5vw;
+
+}
+input {
+    border-radius: 100px;
+    border-color: gainsboro;
+}
+
+input:focus {
+    width: 3vw;
+    border: dashed black 2px;
+    border-radius: 100px;
+    background-color: cyan;
+}
+.glassmorphism {
+    border-radius: 26px;
+    margin: 20px 5px;
+}
+
+button {
+    font-family: "Montserrat", monospace;
+    padding: 3px 15px;
+    font-weight: 700;
+    color: black;
+    background-color: transparent;
+    border: solid 2px black;
+    border-radius: 100px;
+}
+
+button:hover{
+    color: #ff0739;
+    cursor: pointer;
+}
+
+
+#all:hover, #points:hover, #vectors:hover, #equation:hover, #none:hover
+{
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
