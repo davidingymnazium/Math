@@ -28,7 +28,8 @@ class Point {
       this.x = r * Math.cos(φ);
       this.y = r * Math.sin(φ);
     }
-
+     
+    this.mode = mode
   }
 
   display() {
